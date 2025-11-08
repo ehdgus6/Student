@@ -30,7 +30,7 @@ namespace project01
     {
 
         public delegate void CallbackAttack(int hp);
-        public static event CallbackAttack callbackAttack;
+        public static CallbackAttack callbackAttack;
     
         // 클래스의 결합도를 낮추기 위해 private 선언
        // private int x;
@@ -151,7 +151,7 @@ namespace project01
         public override void Attack(Player target)
         {
             // 플레이어의 특수 공격
-            callbackAttack?.Invoke(target.hp);
+            callbackAttack(target.hp);
         }
         public void RangeAttack(Player target)
         {
