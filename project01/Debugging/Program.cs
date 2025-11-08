@@ -5,7 +5,7 @@ class Program
     static void Main()
     {
         Player player = new Player();
-        Monster monster = new Monster();
+        Monster monster = null;
         player.name = "용사";
         monster.name = "고블린"; // NullReferenceException 발생
                               // 전투 시작
